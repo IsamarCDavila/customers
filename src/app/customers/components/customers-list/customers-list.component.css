@@ -1,0 +1,9 @@
+.card, .card .card-header, .btn-danger{
+    border-color: #762933;
+}
+.btn-danger, .btn-danger:focus, .btn-danger:active{
+    background-color: #762933;
+}
+.card-header, .card h5, .card span{
+    color: #762933;
+}

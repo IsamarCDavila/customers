@@ -1,0 +1,15 @@
+<div *ngIf="loading$ | async">
+  Loading...
+</div>
+<div *ngIf="noResults$ | async">
+  No results
+</div>
+<div class="card bg-light mb-3" style="max-width: 30rem;" *ngFor="let customer of customers$ | async">
+  <div class="card-header">COD{{customer.id}}</div>
+  <div class="card-body">
+      <h5 class="card-title" style="text-align: center;">{{customer.name}} {{customer.lastname}}</h5>
+      <label class="card-text"><span>Edad:</span> &nbsp; {{customer.age}}</label><br>
+      <label class="card-text"><span>Fecha de Nacimiento:</span> &nbsp; {{customer.date}}</label><br>
+      <button (click)="delete(customer)" class="btn btn-danger">Delete</button>
+  </div>
+</div>

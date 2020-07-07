@@ -1,0 +1,35 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="form-group">
+      <label for="name">Name</label>
+      <input type="string" class="form-control" id="name"
+        formControlName="name" [class.is-invalid]="isInvalid('name')">
+      <div class="invalid-feedback">
+          Please enter a Name.
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="name">LastName</label>
+      <input type="string" class="form-control" id="lastname"
+        formControlName="lastname" [class.is-invalid]="isInvalid('lastname')">
+      <div class="invalid-feedback">
+          Please enter a LastName.
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="name">Age</label>
+      <input type="string" class="form-control" id="age"
+        formControlName="age" [class.is-invalid]="isInvalid('age')">
+      <div class="invalid-feedback">
+          Please enter a Age.
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="name">Date of Birth</label>
+      <input type="date" class="form-control" id="date" formControlName="date" value="{{  now | date:'yyyy-MM-dd' }}">
+      <div class="invalid-feedback">
+          Please enter a Date of Birth.
+      </div>
+  </div>
+  <button [disabled]="form.invalid" type="submit" class="btn btn-danger d-inline">Add</button>
+  <span class="ml-2">{{ status$ | async }}</span>
+</form>

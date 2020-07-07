@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 mb-3 title_resumen">
+          <h6 style="font-weight: 800;">
+            <fa-icon [icon]='faChartBar'></fa-icon> RESUMEN DE CLIENTES
+          </h6>
+          <app-customers-summary></app-customers-summary>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-6">
+          <h6 class="title_resumen" style="font-weight: 800;">
+            <fa-icon [icon]='faListAlt'></fa-icon> LISTADO DE CLIENTES
+          </h6>
+          <app-customers-list></app-customers-list>
+      </div>
+      <div class="col-6">
+        <h6 class="title_resumen" style="font-weight: 800;">
+          <fa-icon [icon]='faEdit'></fa-icon> CREAR CLIENTES
+        </h6>
+          <app-customers-form></app-customers-form>
+      </div>
+  </div>
+</div>
